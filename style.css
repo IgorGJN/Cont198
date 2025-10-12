@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #282c34;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem; /* maior título */
+  margin-bottom: 40px;
+}
+
+.countdown {
+  display: flex;
+  gap: 30px; /* mais espaçamento entre os boxes */
+  font-size: 3rem; /* aumenta os números */
+}
+
+.time-box {
+  background: #444;
+  padding: 40px 30px; /* mais espaço interno */
+  border-radius: 15px;
+  min-width: 120px; /* boxes maiores */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* destaque */
+  transition: transform 0.2s;
+}
+
+.time-box:hover {
+  transform: scale(1.05); /* efeito ao passar o mouse */
+}
+
+.label {
+  font-size: 1.5rem; /* etiquetas maiores */
+  margin-top: 10px;
+  color: #ccc;
+}
