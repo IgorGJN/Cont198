@@ -3,29 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contagem Regressiva</title>
-  <link rel="icon" type="image/png" href="clock.png">
+  <title>Contadores Totais Interativos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Designações 198</h1>
+  <h1>Contadores Totais</h1>
   <div class="countdown">
-    <div class="time-box">
+    <div class="time-box" data-counter="days">
       <div id="days">0</div>
-      <div class="label">Dias</div>
+      <div class="label">Dias restantes</div>
     </div>
-    <div class="time-box">
-      <div id="hours">0</div>
-      <div class="label">Horas</div>
+    <div class="time-box" data-counter="totalHours">
+      <div id="totalHours">0</div>
+      <div class="label">Horas totais</div>
     </div>
-    <div class="time-box">
-      <div id="minutes">0</div>
-      <div class="label">Minutos</div>
+    <div class="time-box" data-counter="totalMinutes">
+      <div id="totalMinutes">0</div>
+      <div class="label">Minutos totais</div>
     </div>
-    <div class="time-box">
-      <div id="seconds">0</div>
-      <div class="label">Segundos</div>
+    <div class="time-box" data-counter="totalSeconds">
+      <div id="totalSeconds">0</div>
+      <div class="label">Segundos totais</div>
+    </div>
+    <div class="time-box" data-counter="totalMilliseconds">
+      <div id="totalMilliseconds">0</div>
+      <div class="label">Milissegundos totais</div>
+    </div>
+  </div>
+
+  <!-- Tela cheia -->
+  <div id="fullscreenOverlay" class="fullscreen-overlay">
+    <button id="closeBtn">Fechar</button>
+    <div class="fullscreen-counter">
+      <div id="fullscreenValue">0</div>
+      <div id="fullscreenLabel" class="label"></div>
     </div>
   </div>
 

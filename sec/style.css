@@ -1,3 +1,4 @@
+/* ===== ESTILO GERAL ===== */
 body {
   margin: 0;
   height: 100vh;
@@ -16,34 +17,33 @@ body {
 h1 {
   font-size: 4.5vh;
   margin-bottom: 4vh;
+  letter-spacing: 0.5vw;
   color: #00ffcc;
   text-shadow: 0 0 2vh #00ffcc;
 }
 
-/* CONTADORES NORMAL */
+/* ===== DESKTOP ===== */
 .countdown {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2vw;
   width: 90vw;
-  max-width: 1800px;
+  height: 90vh;
 }
 
 .time-box {
   background: #111;
   padding: 2vh 1.5vw;
   border-radius: 2vw;
-  flex: 1 1 18%;
-  min-width: 180px;
-  min-height: 25vh;
+  flex: 1 1 20%;
+  min-width: 220px;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 2vh #00ffcc inset, 0 0 3vh #00ffcc;
-  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -53,59 +53,51 @@ h1 {
 }
 
 .time-box div:first-child {
-  font-size: 7vh;
+  font-size: 9vh;
   font-weight: bold;
-  text-shadow: 0 0 2vh #00ffcc, 0 0 3vh #00ffcc;
+  text-shadow: 0 0 2vh #00ffcc, 0 0 4vh #00ffcc;
 }
 
 .label {
-  font-size: 2.5vh;
+  font-size: 3.5vh;
   color: #00ffccaa;
   margin-top: 1vh;
 }
 
-/* TELA CHEIA */
-.fullscreen-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 999;
-}
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  body {
+    height: 100dvh;
+    justify-content: flex-start;
+    padding-top: 2vh;
+  }
 
-.fullscreen-counter div:first-child {
-  font-size: 15vh;
-  font-weight: bold;
-  color: #00ffcc;
-  text-shadow: 0 0 2vh #00ffcc, 0 0 3vh #00ffcc;
-}
+  h1 {
+    font-size: 3.5vh;
+    margin-bottom: 2vh;
+  }
 
-#fullscreenLabel {
-  font-size: 5vh;
-  margin-top: 2vh;
-  color: #00ffccaa;
-}
+  .countdown {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 80dvh; /* ocupa 80% da tela */
+    gap: 2vh;
+  }
 
-#closeBtn {
-  position: absolute;
-  top: 2vh;
-  right: 2vw;
-  font-size: 2.5vh;
-  padding: 1vh 2vw;
-  background: #111;
-  color: #00ffcc;
-  border: 2px solid #00ffcc;
-  border-radius: 1vh;
-  cursor: pointer;
-  z-index: 1000;
-}
+  .time-box {
+    width: 100%;
+    min-height: 15vh;
+    padding: 1.5vh 0;
+    border-radius: 4vw;
+  }
 
-#closeBtn:hover {
-  background: #222;
+  .time-box div:first-child {
+    font-size: 7vh;
+  }
+
+  .label {
+    font-size: 2.5vh;
+  }
 }
